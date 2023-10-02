@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const sizes = {
+    tablet: '768px',
+    phone: '576px',
+};
+
+const device = {
+    tablet: `(max-width: ${sizes.tablet})`,
+    phone: `(max-width: ${sizes.phone})`,
+};
+
 const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -8,10 +18,23 @@ const FooterContainer = styled.div`
     padding: 50px 100px;
     background-color: #111;
     color: #ebebeb;
+
+    @media ${device.tablet} {
+        flex-direction: column;
+        padding: 30px 50px;
+    }
+
+    @media ${device.phone} {
+        padding: 20px 30px;
+    }
 `;
 
 const Section = styled.div`
     flex: 1;
+
+    @media ${device.tablet} {
+        margin-bottom: 20px;
+    }
 `;
 
 const Header = styled.h2`
@@ -61,24 +84,32 @@ const Input = styled.input`
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
+
+    @media ${device.tablet} {
+        width: 100%;
+    }
 `;
 
 const SubmitButton = styled.button`
     padding: 10px 15px;
-    background-color: #d9a567;
+    background-color: #8a8a8a;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: #c28f51;
+        background-color: #0b0909;
     }
 `;
 
 const SocialIcons = styled.div`
     display: flex;
     gap: 10px;
+
+    @media ${device.tablet} {
+        margin-top: 20px;
+    }
 `;
 
 const Icon = styled.a`

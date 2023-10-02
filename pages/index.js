@@ -10,6 +10,8 @@ import TeamMembers from '../components/Team';
 import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import '../app/globals.css';
+
 
 
 const Index = () => {

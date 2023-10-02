@@ -50,6 +50,7 @@ const MissionHeader = styled.div`
     font-weight: bold;
     margin-bottom: 20px;
     margin-right: 100px;
+    color: #000
 `;
 
 const MissionTitle = styled.h2`
@@ -57,12 +58,14 @@ const MissionTitle = styled.h2`
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.3;
+    color: #000;
 `;
 
 const MissionDescription = styled.p`
     font-size: 16px;
     margin-bottom: 30px;
     max-width: 500px;
+    color: #000
 `;
 
 const Button = styled.a`

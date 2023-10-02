@@ -5,7 +5,7 @@ const StatsContainer = styled.div`
     display: flex;
     justify-content: center; /* Adjusted to center */
     align-items: center;
-    background-color: #FAF3E0; 
+    background-color: #0b0909; 
     padding: 20px; /* Adjusted for consistent padding */
     gap: 40px; /* Sets a consistent gap between child elements */
 `;
@@ -21,11 +21,12 @@ const Number = styled.div`
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #d4d4d4;
 `;
 
 const Label = styled.div`
     font-size: 16px;
-    color: #555;
+    color: #d4d4d4;
 `;
 
 const StatsComponent = () => {

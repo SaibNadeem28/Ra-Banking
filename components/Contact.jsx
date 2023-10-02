@@ -20,11 +20,13 @@ const InquiryBox = styled.div`
 const InquiryHeader = styled.h2`
     font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #000;
 `;
 
 const InquiryText = styled.p`
     font-size: 1.2rem;
     margin-bottom: 30px;
+    color: #000;
 `;
 
 const Input = styled.input`
@@ -39,13 +41,13 @@ const SubmitButton = styled.button`
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #d9a567;
+    background-color: #0b0909;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: #c28f51;
+        background-color: #8a8a8a;
     }
 `;
 
@@ -53,6 +55,7 @@ const CheckboxContainer = styled.div`
     display: flex;
     align-items: center;
     margin: 20px 0;
+    color: #000;
 `;
 
 const Checkbox = styled.input.attrs({ type: 'checkbox' })`

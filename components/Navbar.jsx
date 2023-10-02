@@ -5,7 +5,7 @@ const NavContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FAF3E0;
+    background-color: #0b0909;
     height: auto;
     padding: 10px 0;
     flex-wrap: wrap;
@@ -18,12 +18,18 @@ const NavItem = styled.a`
     margin: 0 15px;
     font-size: 16px;
     text-decoration: none;
-    color: #333;
+    color: #d4d4d4;
     transition: color 0.3s;
+
     &:hover {
         color: #777;
     }
+
     box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        display: none;  // Hide the nav items on mobile
+    }
 `;
 
 const Logo = styled.img`
@@ -41,7 +47,7 @@ const MobileMenuButton = styled.button`
     z-index: 2;
 
     @media (max-width: 768px) {
-        display: block;
+        display: block; // Display the menu button on mobile
     }
 `;
 
@@ -52,19 +58,20 @@ const DropdownMenu = styled.div`
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #FAF3E0;
+    background-color: #fff;
     width: 100%;
     box-sizing: border-box;
     z-index: 1;
 
     @media (max-width: 768px) {
-        ${props => props.isOpen ? 'display: flex;' : 'display: none;'}
+        ${props => props.isOpen ? 'display: flex;' : 'display: none;'} // Conditional rendering based on the isOpen prop
     }
 `;
 
 const DropdownNavItem = styled(NavItem)`
-    display: block;
+    display: block; // Override the desktop style to always display the dropdown items
     margin: 5px 0;
+    color: #0b0909;
 `;
 
 const Navbar = () => {
@@ -74,7 +81,7 @@ const Navbar = () => {
         <NavContainer>
             <NavItem href="#">HOME</NavItem>
             <NavItem href="#">ABOUT</NavItem>
-            <Logo src="/lockup dark grey.svg" alt="RELAND Logo" />
+            <Logo src="/lockup white.svg" alt="RELAND Logo" />
             <MobileMenuButton onClick={() => setMenuOpen(!isMenuOpen)}>
                 ☰
             </MobileMenuButton>

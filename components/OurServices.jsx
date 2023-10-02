@@ -1,20 +1,44 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
+const sizes = {
+    tablet: '768px',
+    phone: '576px',
+};
+
+const device = {
+    tablet: `(max-width: ${sizes.tablet})`,
+    phone: `(max-width: ${sizes.phone})`,
+};
+
 const ServicesContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px;
+
+    @media ${device.tablet} {
+        flex-direction: column;
+    }
 `;
 
 const ImageSection = styled.div`
     width: 50%;
+
+    @media ${device.tablet} {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 `;
 
 const TextSection = styled.div`
     width: 50%;
     padding-left: 40px;
+
+    @media ${device.tablet} {
+        width: 100%;
+        padding-left: 0;
+    }
 `;
 
 const HeaderSmall = styled.p`
@@ -40,7 +64,7 @@ const ServicesSection = () => {
         <ServicesContainer>
             {/* Image Section */}
             <ImageSection>
-                <Image src="/lockup black.png" width={500} height={700} alt="Living Space" />
+                <Image src="/lockup white.png" width={500} height={700} alt="Living Space" />
             </ImageSection>
             
             {/* Text Section */}
