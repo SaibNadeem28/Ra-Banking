@@ -28,7 +28,7 @@ const NavItem = styled.a`
     box-sizing: border-box;
 
     @media (max-width: 768px) {
-        display: none;  // Hide the nav items on mobile
+        display: none;  
     }
 `;
 
@@ -47,7 +47,7 @@ const MobileMenuButton = styled.button`
     z-index: 2;
 
     @media (max-width: 768px) {
-        display: block; // Display the menu button on mobile
+        display: block; 
     }
 `;
 
@@ -64,7 +64,7 @@ const DropdownMenu = styled.div`
     z-index: 1;
 
     @media (max-width: 768px) {
-        ${props => props.isOpen ? 'display: flex;' : 'display: none;'} // Conditional rendering based on the isOpen prop
+        ${props => props.isOpen ? 'display: flex;' : 'display: none;'} 
     }
 `;
 
@@ -81,7 +81,7 @@ const Navbar = () => {
         <NavContainer>
             <NavItem href="#">HOME</NavItem>
             <NavItem href="#">ABOUT</NavItem>
-            <Logo src="/lockup white.svg" alt="RELAND Logo" />
+            <Logo src="/logo white.svg" alt="Logo" />
             <MobileMenuButton onClick={() => setMenuOpen(!isMenuOpen)}>
                 ☰
             </MobileMenuButton>

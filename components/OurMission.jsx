@@ -31,7 +31,7 @@ const ImageContainer = styled.div`
     @media (max-width: 768px) {
         padding-right: 0;
         padding-bottom: 20px;
-        margin-right: 0;  // Reset the margin on smaller screens if necessary
+        margin-right: 0; 
     }
 `;
 
@@ -47,16 +47,35 @@ const ContentContainer = styled.div`
 const MissionHeader = styled.div`
     font-size: 14px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 20px;
     margin-right: 100px;
     color: #000
 `;
 
-const MissionTitle = styled.h2`
+const MissionTitle1 = styled.h2`
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
+    margin-right: 190px;
+    line-height: 1.3;
+    color: #000;
+`;
+
+const MissionTitle2 = styled.h2`
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: 60px;
+    line-height: 1.3;
+    color: #000;
+`;
+
+const MissionTitle3 = styled.h2`
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: -100px;
     line-height: 1.3;
     color: #000;
 `;
@@ -87,15 +106,17 @@ const MissionSection = () => {
         <MissionContainer>
             <ImageContainer>
                 <Image 
-                    src="/logo dark grey.png" 
+                    src="/mission.svg" 
                     alt="Team working on a project" 
-                    width={400}  // Adjust as required
-                    height={400} // Adjust as required
+                    width={400}  
+                    height={400} 
                 />
             </ImageContainer>
             <ContentContainer>
                 <MissionHeader>OUR MISSION</MissionHeader>
-                <MissionTitle>Bridging to Europe <br /> Building Legacies<br /> Benefiting Humanity</MissionTitle>
+                <MissionTitle1>Bridging to Europe </MissionTitle1>
+                    <MissionTitle2> Building Legacies </MissionTitle2> 
+                    <MissionTitle3> Benefiting Humanity </MissionTitle3>
                 <MissionDescription>
                 At RA Banking, our mission is to serve as the trusted bridge to European financial markets, empowering our clients with specialized services and insights. We are dedicated to transforming individual wealth into generational assets, fostering a legacy of prosperity. As we navigate the complexities of global finance, we remain steadfast in our commitment to ethical practices, ensuring that our growth contributes positively to humanity and the communities we touch.
                 </MissionDescription>

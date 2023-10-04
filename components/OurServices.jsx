@@ -24,6 +24,7 @@ const ServicesContainer = styled.div`
 
 const ImageSection = styled.div`
     width: 50%;
+    margin-left: 100px;
 
     @media ${device.tablet} {
         width: 100%;
@@ -33,7 +34,7 @@ const ImageSection = styled.div`
 
 const TextSection = styled.div`
     width: 50%;
-    padding-left: 40px;
+    padding-left: 30px;
 
     @media ${device.tablet} {
         width: 100%;
@@ -64,7 +65,7 @@ const ServicesSection = () => {
         <ServicesContainer>
             {/* Image Section */}
             <ImageSection>
-                <Image src="/lockup white.png" width={500} height={700} alt="Living Space" />
+                <Image src="/services.svg" width={500} height={700} alt="Living Space" />
             </ImageSection>
             
             {/* Text Section */}

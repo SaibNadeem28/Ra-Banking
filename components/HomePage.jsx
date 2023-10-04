@@ -7,16 +7,14 @@ const Container = styled.div`
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background: url("/banner.png") center center/cover no-repeat;
+    background: url("/hero.png") center center/cover no-repeat;
 
     @media (max-width: 768px) { 
-        // Adjustments for tablet
-        // Example: height: 80vh;
+
     }
 
     @media (max-width: 480px) { 
-        // Adjustments for mobile phones
-        // Example: height: 60vh;
+       
     }
 `;
 
@@ -74,7 +72,7 @@ const Button = styled.a`
 const HomePage = () => {
     return (
         <Container>
-            <Heading>Your Wealth, Our Wisdom: A Partnership for Prosperity with RA Banking</Heading>
+            <Heading>Your Wealth, Our Wisdom:<br /> A Partnership for Prosperity <br />with RA Banking</Heading>
             <SubText>
             At RA Banking, we serve as your gateway to European markets, offering specialized services and insights that empower you to make informed decisions on your financial journey. We are committed to transforming your wealth into generational assets, all while fostering a culture of giving back to humanity.
             </SubText>

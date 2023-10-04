@@ -18,7 +18,6 @@ const Index = () => {
     return <div>
         <Navbar />
         <HomePage />
-        <Counter />
         <OurMission />
         <OurProject />
         <OurServices />

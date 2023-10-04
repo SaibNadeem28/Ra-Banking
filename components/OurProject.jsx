@@ -58,8 +58,8 @@ const FeaturedSubtitle = styled.h2`
 const ImageContainer = styled.div`
     flex: 1.5;
     position: relative;
-    width: 60%;
-    height: 500px;
+    width: 50%;
+    height: 800px;
     border-radius: 8px;
     overflow: hidden;
 
@@ -90,14 +90,14 @@ const FeaturedProjects = () => {
             </FeaturedTextContainer>
             <ImageContainer>
                 <Image
-                    src="/lockup black.png"
+                    src="/projects.svg"
                     alt="Your alt text"
                     width={500}  
                     height={500}  
                     layout="responsive"
                 />
-                <ImageTitle>PARAGON HOTEL CONCEPT</ImageTitle>
-                <ImageSubtitle>NEW ORLEANS, LA</ImageSubtitle>
+                {/*<ImageTitle>PARAGON HOTEL CONCEPT</ImageTitle>
+                <ImageSubtitle>NEW ORLEANS, LA</ImageSubtitle>*/}
             </ImageContainer>
         </FeaturedProjectsContainer>
     );

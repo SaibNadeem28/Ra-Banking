@@ -56,6 +56,7 @@ const CheckboxContainer = styled.div`
     align-items: center;
     margin: 20px 0;
     color: #000;
+    margin-left: 70px;
 `;
 
 const Checkbox = styled.input.attrs({ type: 'checkbox' })`
