@@ -8,6 +8,7 @@ const Container = styled.div`
     height: 100vh;
     width: 100vw;
     background: url("/hero.png") center center/cover no-repeat;
+    color: #ffffff;
 
     @media (max-width: 768px) { 
 
@@ -34,6 +35,7 @@ const Heading = styled.h1`
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
+    color: #ffffff;
 
     @media (max-width: 768px) {
         font-size: 32px;
@@ -45,6 +47,7 @@ const SubText = styled.p`
     margin-bottom: 40px;
     max-width: 600px;
     text-align: center;
+    color: #ffffff;
 
     @media (max-width: 768px) {
         font-size: 16px;
