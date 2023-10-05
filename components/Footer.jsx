@@ -14,7 +14,7 @@ const device = {
 const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; 
     padding: 50px 100px;
     background-color: #111;
     color: #ebebeb;
@@ -22,6 +22,7 @@ const FooterContainer = styled.div`
     @media ${device.tablet} {
         flex-direction: column;
         padding: 30px 50px;
+        align-items: center;
     }
 
     @media ${device.phone} {
@@ -31,34 +32,32 @@ const FooterContainer = styled.div`
 
 const Section = styled.div`
     flex: 1;
+    margin-bottom: 20px;
 
     @media ${device.tablet} {
-        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
     }
 `;
 
 const Header = styled.h2`
     font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #fff;
+
+    @media ${device.phone} {
+        font-size: 1.2rem;
+    }
 `;
 
 const Address = styled.p`
     margin-bottom: 5px;
+    color: #ebebeb;
 `;
 
 const Email = styled.a`
     display: block;
     margin-bottom: 5px;
-    color: #ebebeb;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-`;
-
-const PhoneNumber = styled.a`
-    display: block;
     color: #ebebeb;
     text-decoration: none;
 
@@ -115,13 +114,17 @@ const SocialIcons = styled.div`
 const Icon = styled.a`
     color: #ebebeb;
     font-size: 1.2rem;
+
+    @media ${device.phone} {
+        font-size: 1.5rem; 
+    }
 `;
 
 const Footer = () => {
     return (
         <FooterContainer>
             <Section>
-                <Header><img src='/lockup white.svg'></img></Header>
+                <Header><img src='/lockup white.svg' alt="Logo" /></Header>
             </Section>
             <Section>
                 <Header>CONTACT</Header>

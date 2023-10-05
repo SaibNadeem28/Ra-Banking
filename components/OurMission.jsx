@@ -1,47 +1,32 @@
-// components/MissionSection.js
 import styled from 'styled-components';
 import Image from 'next/image';
 
 const MissionContainer = styled.div`
     display: flex;
-    background-color: #FFF; 
-    padding: 50px 100px; 
+    flex-direction: column;
     align-items: center;
-    justify-content: center; // Center items horizontally
+    background-color: #FFF; 
+    padding: 50px 100px;
+    text-align: center;
 
     @media (max-width: 768px) {
-        flex-direction: column;
         padding: 20px;
     }
 `;
 
 const ImageContainer = styled.div`
-    flex: 1;
-    padding-right: 50px;
-    display: flex;
-    align-items: center;  
-    justify-content: center; 
-    margin-left: 100px; 
+    width: 80%;
+    margin-bottom: 20px;
 
     img {
-        max-width: 100%;
+        width: 100%;
+        height: auto;
         border-radius: 5px;
     }
 
     @media (max-width: 768px) {
-        padding-right: 0;
-        padding-bottom: 20px;
-        margin-right: 0; 
+        width: 60%;
     }
-`;
-
-
-const ContentContainer = styled.div`
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    text-align: justify;   
 `;
 
 const MissionHeader = styled.div`
@@ -49,55 +34,34 @@ const MissionHeader = styled.div`
     text-transform: uppercase;
     font-weight: normal;
     margin-bottom: 20px;
-    margin-right: 100px;
-    color: #000
+    color: #000;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 `;
 
-const MissionTitle1 = styled.h2`
+const MissionTitle = styled.h2`
     font-size: 36px;
     font-weight: bold;
-    margin-bottom: 20px;
-    margin-right: 190px;
+    margin-bottom: 10px;
     line-height: 1.3;
     color: #000;
-`;
 
-const MissionTitle2 = styled.h2`
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-right: 60px;
-    line-height: 1.3;
-    color: #000;
-`;
-
-const MissionTitle3 = styled.h2`
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-right: -100px;
-    line-height: 1.3;
-    color: #000;
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
 `;
 
 const MissionDescription = styled.p`
     font-size: 16px;
-    margin-bottom: 30px;
-    max-width: 500px;
-    color: #000
-`;
+    margin-top: 20px;
+    max-width: 700px;
+    color: #000;
 
-const Button = styled.a`
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-        background-color: #555;
+    @media (max-width: 768px) {
+        font-size: 14px;
+        max-width: 90%;
     }
 `;
 
@@ -108,19 +72,18 @@ const MissionSection = () => {
                 <Image 
                     src="/mission.svg" 
                     alt="Team working on a project" 
+                    layout="responsive"
                     width={400}  
                     height={400} 
                 />
             </ImageContainer>
-            <ContentContainer>
-                <MissionHeader>OUR MISSION</MissionHeader>
-                <MissionTitle1>Bridging to Europe </MissionTitle1>
-                    <MissionTitle2> Building Legacies </MissionTitle2> 
-                    <MissionTitle3> Benefiting Humanity </MissionTitle3>
-                <MissionDescription>
+            <MissionHeader>OUR MISSION</MissionHeader>
+            <MissionTitle>Bridging to Europe</MissionTitle>
+            <MissionTitle>Building Legacies</MissionTitle>
+            <MissionTitle>Benefiting Humanity</MissionTitle>
+            <MissionDescription>
                 At RA Banking, our mission is to serve as the trusted bridge to European financial markets, empowering our clients with specialized services and insights. We are dedicated to transforming individual wealth into generational assets, fostering a legacy of prosperity. As we navigate the complexities of global finance, we remain steadfast in our commitment to ethical practices, ensuring that our growth contributes positively to humanity and the communities we touch.
-                </MissionDescription>
-            </ContentContainer>
+            </MissionDescription>
         </MissionContainer>
     );
 };

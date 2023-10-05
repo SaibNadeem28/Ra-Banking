@@ -14,7 +14,11 @@ const InquiryBox = styled.div`
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 60%;
+    width: 100%; // To cover the entire width
+
+    @media (min-width: 768px) {
+        width: 60%; 
+    }
 `;
 
 const InquiryHeader = styled.h2`
@@ -30,11 +34,15 @@ const InquiryText = styled.p`
 `;
 
 const Input = styled.input`
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 10px;
-    width: 40%;
+    margin: 15px 0; // Increased vertical spacing
+    width: 100%; // Make input take full width
+
+    @media (min-width: 768px) {
+        width: 80%; // For larger screens, reduce the width slightly.
+    }
 `;
 
 const SubmitButton = styled.button`
@@ -56,7 +64,11 @@ const CheckboxContainer = styled.div`
     align-items: center;
     margin: 20px 0;
     color: #000;
-    margin-left: 70px;
+    justify-content: center; // To center the checkbox and its label
+
+    @media (min-width: 768px) {
+        margin-left: 70px; 
+    }
 `;
 
 const Checkbox = styled.input.attrs({ type: 'checkbox' })`
