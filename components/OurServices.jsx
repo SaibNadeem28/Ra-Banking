@@ -48,7 +48,7 @@ const TextSection = styled.div`
 
 const HeaderSmall = styled.p`
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 18px;
     margin-bottom: 20px;
 
     @media ${device.phone}{

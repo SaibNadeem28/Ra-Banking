@@ -12,7 +12,14 @@ const NavContainer = styled.div`
     width: 100%; 
     position: relative; 
     box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+        align-items: flex-start; 
+        height: 50px;
+    }
 `;
+
 
 const NavItem = styled.a`
     margin: 0 15px;
@@ -37,8 +44,11 @@ const Logo = styled.img`
     margin: 0 50px;
     box-sizing: border-box;
 
-    @media (min-width: 767) {
-        margin-right: 250px;
+    @media (max-width: 768px) {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 `;
 
@@ -49,10 +59,14 @@ const MobileMenuButton = styled.button`
     font-size: 24px;
     cursor: pointer;
     z-index: 2;
-    margin-left: 220px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
 
     @media (max-width: 768px) {
-        display: block; 
+        display: block;
     }
 `;
 
@@ -74,7 +88,7 @@ const DropdownMenu = styled.div`
 `;
 
 const DropdownNavItem = styled(NavItem)`
-    display: block; // Override the desktop style to always display the dropdown items
+    display: block;
     margin: 5px 0;
     color: #0b0909;
 `;
