@@ -19,12 +19,15 @@ const ServicesContainer = styled.div`
 
     @media ${device.tablet} {
         flex-direction: column;
+        align-items: center;
     }
 `;
 
 const ImageSection = styled.div`
-    width: 50%;
-    margin-left: 100px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media ${device.tablet} {
         width: 100%;
@@ -33,12 +36,13 @@ const ImageSection = styled.div`
 `;
 
 const TextSection = styled.div`
-    width: 50%;
+    flex: 1;
     padding-left: 30px;
 
     @media ${device.tablet} {
         width: 100%;
         padding-left: 0;
+        text-align: center;
     }
 `;
 
@@ -49,7 +53,7 @@ const HeaderSmall = styled.p`
 `;
 
 const HeaderLarge = styled.h1`
-    font-size: 2rem;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
 `;

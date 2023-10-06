@@ -21,10 +21,10 @@ const FeaturedProjectsContainer = styled.div`
     background-color: #d4d4d4;
     margin: 0 auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; // Ensure the container takes the full width
+    width: 100%;
 
     @media ${device.tablet} {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 50px;
     }
 `;
@@ -39,7 +39,7 @@ const FeaturedTextContainer = styled.div`
 `;
 
 const FeaturedTitle = styled.h1`
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 30px;
     font-weight: bold;
     color: #0b0909;
@@ -55,40 +55,30 @@ const FeaturedSubtitle = styled.h2`
     color: #0b0909;
 `;
 
-const ImageContainer = styled.div`
-    flex: 1.5;
-    position: relative;
-    width: 50%;
-    height: 800px;
-    border-radius: 8px;
-    overflow: hidden;
+const SVGWrapper = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-left: 50px;
 
     @media ${device.tablet} {
         width: 100%;
-        height: auto;
+        margin-left: 0;
+        margin-bottom: 30px;
     }
-`;
-
-const ImageTitle = styled.p`
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #0b0909;
-`;
-
-const ImageSubtitle = styled.p`
-    font-size: 16px;
-    color: #0b0909;
 `;
 
 const FeaturedProjects = () => {
     return (
-        <FeaturedProjectsContainer>
+        <FeaturedProjectsContainer id='projects'>
             <FeaturedTextContainer>
                 <FeaturedSubtitle>FEATURED PROJECTS</FeaturedSubtitle>
                 <FeaturedTitle>Collaborating with industry leaders to deliver unparalleled financial solutions and insights for our clients</FeaturedTitle>
             </FeaturedTextContainer>
-            <ImageContainer>
+            <SVGWrapper>
                 <Image
                     src="/projects.svg"
                     alt="Your alt text"
@@ -96,9 +86,7 @@ const FeaturedProjects = () => {
                     height={500}  
                     layout="responsive"
                 />
-                {/*<ImageTitle>PARAGON HOTEL CONCEPT</ImageTitle>
-                <ImageSubtitle>NEW ORLEANS, LA</ImageSubtitle>*/}
-            </ImageContainer>
+            </SVGWrapper>
         </FeaturedProjectsContainer>
     );
 };

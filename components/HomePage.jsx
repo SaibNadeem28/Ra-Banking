@@ -74,7 +74,7 @@ const Button = styled.a`
 
 const HomePage = () => {
     return (
-        <Container>
+        <Container id='home'>
             <Heading>Your Wealth, Our Wisdom:<br /> A Partnership for Prosperity <br />with RA Banking</Heading>
             <SubText>
             At RA Banking, we serve as your gateway to European markets, offering specialized services and insights that empower you to make informed decisions on your financial journey. We are committed to transforming your wealth into generational assets, all while fostering a culture of giving back to humanity.

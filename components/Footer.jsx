@@ -14,10 +14,11 @@ const device = {
 const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; 
+    align-items: flex-start;
     padding: 50px 100px;
     background-color: #111;
     color: #ebebeb;
+    position: relative;
 
     @media ${device.tablet} {
         flex-direction: column;
@@ -27,6 +28,17 @@ const FooterContainer = styled.div`
 
     @media ${device.phone} {
         padding: 20px 30px;
+    }
+`;
+
+const Logo = styled.img`
+    max-width: 150px;
+    margin-bottom: 20px;
+
+    @media ${device.tablet} {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 `;
 
@@ -105,9 +117,15 @@ const SubmitButton = styled.button`
 const SocialIcons = styled.div`
     display: flex;
     gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 
     @media ${device.tablet} {
+        position: static;
         margin-top: 20px;
+        justify-content: center;
     }
 `;
 
@@ -116,7 +134,7 @@ const Icon = styled.a`
     font-size: 1.2rem;
 
     @media ${device.phone} {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 `;
 
@@ -124,7 +142,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <Section>
-                <Header><img src='/lockup white.svg' alt="Logo" /></Header>
+                <Logo src='/lockup white.svg' alt="Logo" />
             </Section>
             <Section>
                 <Header>CONTACT</Header>

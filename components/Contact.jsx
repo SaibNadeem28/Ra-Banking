@@ -77,7 +77,7 @@ const Checkbox = styled.input.attrs({ type: 'checkbox' })`
 
 const QuickInquiry = () => {
     return (
-        <InquiryContainer>
+        <InquiryContainer id='contact'>
             <InquiryBox>
                 <InquiryHeader>Inquiry</InquiryHeader>
                 <InquiryText>Got questions? Lets chat! We are eager to assist and guide you right away.</InquiryText>

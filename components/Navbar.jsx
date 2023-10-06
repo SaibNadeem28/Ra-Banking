@@ -79,20 +79,20 @@ const Navbar = () => {
 
     return (
         <NavContainer>
-            <NavItem href="#">HOME</NavItem>
-            <NavItem href="#">ABOUT</NavItem>
+            <NavItem href="#home">HOME</NavItem>
+            <NavItem href="#about">ABOUT</NavItem>
             <Logo src="/logo white.svg" alt="Logo" />
             <MobileMenuButton onClick={() => setMenuOpen(!isMenuOpen)}>
                 ☰
             </MobileMenuButton>
             <DropdownMenu isOpen={isMenuOpen}>
-                <DropdownNavItem href="#">HOME</DropdownNavItem>
-                <DropdownNavItem href="#">ABOUT</DropdownNavItem>
-                <DropdownNavItem href="#">PROJECTS</DropdownNavItem>
-                <DropdownNavItem href="#">CONTACTS</DropdownNavItem>
+                <DropdownNavItem href="#home">HOME</DropdownNavItem>
+                <DropdownNavItem href="#about">ABOUT</DropdownNavItem>
+                <DropdownNavItem href="#projects">PROJECTS</DropdownNavItem>
+                <DropdownNavItem href="#contact">CONTACTS</DropdownNavItem>
             </DropdownMenu>
-            <NavItem href="#">PROJECTS</NavItem>
-            <NavItem href="#">CONTACTS</NavItem>
+            <NavItem href="#projects">PROJECTS</NavItem>
+            <NavItem href="#contact">CONTACTS</NavItem>
         </NavContainer>
     );
 };
