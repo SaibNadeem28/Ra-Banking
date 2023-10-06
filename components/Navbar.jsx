@@ -36,6 +36,10 @@ const Logo = styled.img`
     height: 30px;
     margin: 0 50px;
     box-sizing: border-box;
+
+    @media (min-width: 767) {
+        margin-right: 250px;
+    }
 `;
 
 const MobileMenuButton = styled.button`
@@ -45,6 +49,7 @@ const MobileMenuButton = styled.button`
     font-size: 24px;
     cursor: pointer;
     z-index: 2;
+    margin-left: 220px;
 
     @media (max-width: 768px) {
         display: block; 
@@ -79,20 +84,20 @@ const Navbar = () => {
 
     return (
         <NavContainer>
-            <NavItem href="#home">HOME</NavItem>
             <NavItem href="#about">ABOUT</NavItem>
+            <NavItem href="#projects">PROJECTS</NavItem>
             <Logo src="/logo white.svg" alt="Logo" />
             <MobileMenuButton onClick={() => setMenuOpen(!isMenuOpen)}>
                 ☰
             </MobileMenuButton>
             <DropdownMenu isOpen={isMenuOpen}>
-                <DropdownNavItem href="#home">HOME</DropdownNavItem>
                 <DropdownNavItem href="#about">ABOUT</DropdownNavItem>
                 <DropdownNavItem href="#projects">PROJECTS</DropdownNavItem>
-                <DropdownNavItem href="#contact">CONTACTS</DropdownNavItem>
+                <DropdownNavItem href="#services">SERVICES</DropdownNavItem>
+                <DropdownNavItem href="#contact">CONTACT US</DropdownNavItem>
             </DropdownMenu>
-            <NavItem href="#projects">PROJECTS</NavItem>
-            <NavItem href="#contact">CONTACTS</NavItem>
+            <NavItem href="#services">SERVICES</NavItem>
+            <NavItem href="#contact">CONTACT US</NavItem>
         </NavContainer>
     );
 };

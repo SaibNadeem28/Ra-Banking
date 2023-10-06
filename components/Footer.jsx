@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const sizes = {
     tablet: '768px',
@@ -89,20 +88,23 @@ const Link = styled.a`
     }
 `;
 
+const InputWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+`;
+
 const Input = styled.input`
     padding: 10px;
-    width: 80%;
-    margin-bottom: 10px;
+    flex: 1;
     border: none;
     border-radius: 5px;
-
-    @media ${device.tablet} {
-        width: 100%;
-    }
 `;
 
 const SubmitButton = styled.button`
     padding: 10px 15px;
+    margin-left: 10px;  // Space between input and button
     background-color: #8a8a8a;
     border: none;
     border-radius: 5px;
@@ -111,30 +113,6 @@ const SubmitButton = styled.button`
 
     &:hover {
         background-color: #0b0909;
-    }
-`;
-
-const SocialIcons = styled.div`
-    display: flex;
-    gap: 10px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    @media ${device.tablet} {
-        position: static;
-        margin-top: 20px;
-        justify-content: center;
-    }
-`;
-
-const Icon = styled.a`
-    color: #ebebeb;
-    font-size: 1.2rem;
-
-    @media ${device.phone} {
-        font-size: 1.5rem;
     }
 `;
 
@@ -156,15 +134,14 @@ const Footer = () => {
             </Section>
             <Section>
                 <Header>NEWSLETTER</Header>
-                <Input type="email" placeholder="Email address..." />
-                <SubmitButton>{'>'}</SubmitButton>
+                <InputWrapper>
+                    <Input type="email" placeholder="Email address..." />
+                    <SubmitButton>{'>'}</SubmitButton>
+                </InputWrapper>
             </Section>
-            <SocialIcons>
-                <Icon><FontAwesomeIcon icon={['fab', 'facebook-f']} /></Icon>
-                <Icon><FontAwesomeIcon icon={['fab', 'instagram']} /></Icon>
-                <Icon><FontAwesomeIcon icon={['fab', 'twitter']} /></Icon>
-                <Icon><FontAwesomeIcon icon={['fab', 'linkedin-in']} /></Icon>
-            </SocialIcons>
+            {/* <SocialIcons>
+                // ...
+            </SocialIcons> */}
         </FooterContainer>
     );
 };

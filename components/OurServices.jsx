@@ -50,6 +50,10 @@ const HeaderSmall = styled.p`
     text-transform: uppercase;
     font-size: 0.8rem;
     margin-bottom: 20px;
+
+    @media ${device.phone}{
+        font-size: 16px;
+    }
 `;
 
 const HeaderLarge = styled.h1`
@@ -62,17 +66,16 @@ const ServiceList = styled.ul`
     list-style-type: disc;
     padding-left: 20px;
     line-height: 1.8;
+    text-align: left;
 `;
 
 const ServicesSection = () => {
     return (
-        <ServicesContainer>
-            {/* Image Section */}
+        <ServicesContainer id='services'>
             <ImageSection>
                 <Image src="/services.svg" width={500} height={700} alt="Living Space" />
             </ImageSection>
             
-            {/* Text Section */}
             <TextSection>
                 <HeaderSmall>Our Services</HeaderSmall>
                 <HeaderLarge>Business Setup & Registration</HeaderLarge>

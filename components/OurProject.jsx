@@ -20,7 +20,6 @@ const FeaturedProjectsContainer = styled.div`
     padding: 100px 150px;
     background-color: #d4d4d4;
     margin: 0 auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
 
     @media ${device.tablet} {
@@ -31,6 +30,7 @@ const FeaturedProjectsContainer = styled.div`
 
 const FeaturedTextContainer = styled.div`
     flex: 1;
+    text-align: justify;
 
     @media ${device.tablet} {
         text-align: center;
@@ -43,9 +43,10 @@ const FeaturedTitle = styled.h1`
     margin-bottom: 30px;
     font-weight: bold;
     color: #0b0909;
+    text-align: left;
 
     @media ${device.tablet} {
-        font-size: 36px;
+        font-size: 35px;
     }
 `;
 

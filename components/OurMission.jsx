@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
+const sizes = {
+    desktop: '1200px',
+    tablet: '768px',
+    phone: '576px',
+};
+
+const device = {
+    desktop: `(max-width: ${sizes.desktop})`,
+    tablet: `(max-width: ${sizes.tablet})`,
+    phone: `(max-width: ${sizes.phone})`,
+};
+
 const MissionContainer = styled.div`
     display: flex;
     flex-direction: row; 
@@ -9,7 +21,7 @@ const MissionContainer = styled.div`
     padding: 50px 100px;
     text-align: left; 
 
-    @media (max-width: 768px) {
+    @media ${device.tablet} {
         flex-direction: column;
         align-items: center;
         padding: 20px;
@@ -24,13 +36,13 @@ const ImageContainer = styled.div`
     height: auto;
     border-radius: 8px;
     overflow: hidden;
-    margin-right: 50px; // space between the image and text
+    margin-right: 50px;
 
-    @media (max-width: 768px) {
+    @media ${device.tablet} {
         width: 80%;
         height: auto;
         margin-bottom: 20px;
-        margin-right: 0; // reset the margin for mobile view
+        margin-right: 0;
     }
 `;
 
@@ -40,39 +52,42 @@ const TextContainer = styled.div`
     flex-direction: column;
 `;
 
-const MissionHeader = styled.div`
-    font-size: 14px;
+const MissionHeader = styled.h2`
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: normal;
     margin-bottom: 20px;
     color: #000;
 
-    @media (max-width: 768px) {
-        font-size: 12px;
+    @media ${device.tablet} {
+        font-size: 16px; 
     }
 `;
 
-const MissionTitle = styled.h2`
+const MissionTitle = styled.h1`
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
     line-height: 1.3;
     color: #000;
+    text-align: left;
 
-    @media (max-width: 768px) {
-        font-size: 36px;
+    @media ${device.tablet} {
+        font-size: 35px;
     }
 `;
 
 const MissionDescription = styled.p`
-    font-size: 16px;
+    font-size: 18px; 
     margin-top: 20px;
     max-width: 700px;
     color: #000;
+    text-align: justify;
 
-    @media (max-width: 768px) {
+    @media ${device.tablet} {
         font-size: 14px;
         max-width: 90%;
+        text-align: justify;
     }
 `;
 

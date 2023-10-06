@@ -19,7 +19,6 @@ const Container = styled.div`
     }
 `;
 
-
 const RelandLogo = styled.img`
     height: 40px;
     margin-bottom: 30px;
@@ -46,8 +45,10 @@ const SubText = styled.p`
     font-size: 18px;
     margin-bottom: 40px;
     max-width: 600px;
-    text-align: center;
+    text-align: justify;
     color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
 
     @media (max-width: 768px) {
         font-size: 16px;
@@ -62,6 +63,7 @@ const Button = styled.a`
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
+    margin-right: 20px;
 
     &:hover {
         background-color: #555;
@@ -75,11 +77,11 @@ const Button = styled.a`
 const HomePage = () => {
     return (
         <Container id='home'>
-            <Heading>Your Wealth, Our Wisdom:<br /> A Partnership for Prosperity <br />with RA Banking</Heading>
+            <Heading>Your Wealth,&nbsp;Our&nbsp;Wisdom:<br />A Partnership for Prosperity<br />with RA Banking</Heading>
             <SubText>
             At RA Banking, we serve as your gateway to European markets, offering specialized services and insights that empower you to make informed decisions on your financial journey. We are committed to transforming your wealth into generational assets, all while fostering a culture of giving back to humanity.
             </SubText>
-            <Button>CONNECT NOW</Button>
+            <Button href='#contact'>CONNECT NOW</Button>
         </Container>
     );
 };
