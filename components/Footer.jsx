@@ -124,7 +124,7 @@ const Footer = () => {
             </Section>
             <Section>
                 <Header>CONTACT</Header>
-                <Address>Quezon City, Manila, Philippines</Address>
+                <Address>Blk 8 Lot 14 Camella Cielo Brgy.Kaybanban City of San Jose Del Monte Bulacan</Address>
                 <Email href="mailto:relandgroup@mail.com">info@ra-banking.com</Email>
             </Section>
             <Section>
